@@ -1,0 +1,40 @@
+map<int,int> mapInsert(int arr[],int n)
+{
+    map<int,int>mp;
+    for(int i=0;i<n;i++)
+    mp[arr[i]]=i;
+    
+   //Insert arr[i] as key and i as value
+    
+    
+    return mp;
+    
+}
+
+
+void mapDisplay(map<int,int>mp)
+{
+    for(auto it:mp)
+    cout<<it.first<<" "<<it.second<<"\n";
+    //Print every key and value pair in a new line
+ 
+}
+
+
+void mapErase(map<int,int>&mp,int x)
+{
+    auto it=mp.find(x);
+    if(it!=mp.end())
+    {
+        mp.erase(it);
+    
+   //Write the if and else condition to erase x from map
+    cout<<"erased "<<x;
+    }
+    else
+    //else condition
+    cout<<"not found";
+    
+    
+    cout<<endl;
+}
