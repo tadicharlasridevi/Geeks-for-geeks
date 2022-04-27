@@ -1,0 +1,17 @@
+
+long long int killinSpree(long long int n)
+    {
+        long long int c=0,a=n;
+        for(int i=1;i*i<=n;i++)
+        {
+           a=a-(i*i);
+           if(a>=0)
+           c=c+1;
+           else
+           break;
+            
+           
+        }
+        return c;
+        // Code Here
+    }
